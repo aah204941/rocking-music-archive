@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rocking Music Archive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Rocking Music Archive</h1>
+    <p>邦楽・洋楽アルバム管理サイト</p>
+
+    <nav>
+      <a href="#">X</a>
+      <a href="#">YouTube</a>
+      <a href="#">Instagram</a>
+      <a href="#">その他SNS</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="form-area">
+      <h2>アルバム追加</h2>
+
+      <div class="form-box">
+
+        <label>邦楽 / 洋楽</label>
+        <select id="category">
+          <option value="japanese">邦楽</option>
+          <option value="western">洋楽</option>
+        </select>
+
+        <label>アルバム名</label>
+        <input type="text" id="albumName">
+
+        <label>アーティスト名</label>
+        <input type="text" id="artistName">
+
+        <label>西暦</label>
+        <input type="number" id="year">
+
+        <label>オリコンチャート</label>
+        <input type="text" id="chart" placeholder="例：1位 / 圏外">
+
+        <label>ジャケ写</label>
+        <input type="file" id="jacket" accept="image/*">
+
+        <label>評価</label>
+        <select id="rank">
+          <option value="S">S</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+        </select>
+
+        <label>コメント</label>
+        <textarea id="comment" rows="5"></textarea>
+
+        <button onclick="addAlbum()">追加</button>
+
+      </div>
+    </section>
+
+    <section class="ad-area">
+      <h2>広告エリア</h2>
+      <p>ここに音楽系広告を入れる予定</p>
+    </section>
+
+    <section>
+      <h2>邦楽アルバム</h2>
+      <div id="japaneseList" class="album-list"></div>
+    </section>
+
+    <section>
+      <h2>洋楽アルバム</h2>
+      <div id="westernList" class="album-list"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Rocking Music Archive</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
