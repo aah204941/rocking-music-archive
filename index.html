@@ -2,93 +2,154 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Rocking Music Archive</title>
-  <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rocking Music Archive</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-  <header>
-    <h1>Rocking Music Archive</h1>
-    <p>邦楽・洋楽アルバム管理サイト</p>
+<header>
 
-    <nav>
-      <a href="#">X</a>
-      <a href="#">YouTube</a>
-      <a href="#">Instagram</a>
-      <a href="#">その他SNS</a>
-    </nav>
-  </header>
+<h1>Rocking Music Archive</h1>
 
-  <main>
+<p>邦楽・洋楽アルバム管理サイト</p>
 
-    <section class="form-area">
-      <h2>アルバム追加</h2>
+<nav>
+<a href="#" target="_blank">X</a>
+<a href="#" target="_blank">YouTube</a>
+<a href="#" target="_blank">Instagram</a>
+<a href="#" target="_blank">その他SNS</a>
+</nav>
 
-      <div class="form-box">
+</header>
 
-        <label>邦楽 / 洋楽</label>
-        <select id="category">
-          <option value="japanese">邦楽</option>
-          <option value="western">洋楽</option>
-        </select>
+<main>
 
-        <label>アルバム名</label>
-        <input type="text" id="albumName">
+<section class="form-area">
 
-        <label>アーティスト名</label>
-        <input type="text" id="artistName">
+<h2>アルバム追加</h2>
 
-        <label>西暦</label>
-        <input type="number" id="year">
+<div class="form-box">
 
-        <label>オリコンチャート</label>
-        <input type="text" id="chart" placeholder="例：1位 / 圏外">
+<label>邦楽 / 洋楽</label>
 
-        <label>ジャケ写</label>
-        <input type="file" id="jacket" accept="image/*">
+<select id="category">
+<option value="japanese">邦楽</option>
+<option value="western">洋楽</option>
+</select>
 
-        <label>評価</label>
-        <select id="rank">
-          <option value="S">S</option>
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
-          <option value="D">D</option>
-          <option value="E">E</option>
-        </select>
+<label>アルバム名</label>
+<input
+type="text"
+id="albumName"
+placeholder="アルバム名">
 
-        <label>コメント</label>
-        <textarea id="comment" rows="5"></textarea>
+<label>アーティスト名</label>
+<input
+type="text"
+id="artistName"
+placeholder="アーティスト名">
 
-        <button onclick="addAlbum()">追加</button>
+<label>発売年</label>
+<input
+type="number"
+id="year"
+placeholder="2026">
 
-      </div>
-    </section>
+<label>オリコン順位</label>
+<input
+type="number"
+id="chart"
+placeholder="1">
 
-    <section class="ad-area">
-      <h2>広告エリア</h2>
-      <p>ここに音楽系広告を入れる予定</p>
-    </section>
+<label>ジャケット画像</label>
+<input
+type="file"
+id="jacket"
+accept="image/*">
 
-    <section>
-      <h2>邦楽アルバム</h2>
-      <div id="japaneseList" class="album-list"></div>
-    </section>
+<label>評価</label>
 
-    <section>
-      <h2>洋楽アルバム</h2>
-      <div id="westernList" class="album-list"></div>
-    </section>
+<select id="rank">
+<option value="S">S</option>
+<option value="A">A</option>
+<option value="B">B</option>
+<option value="C">C</option>
+<option value="D">D</option>
+<option value="E">E</option>
+</select>
 
-  </main>
+<label>コメント</label>
 
-  <footer>
-    <p>&copy; 2026 Rocking Music Archive</p>
-  </footer>
+<textarea
+id="comment"
+rows="5"
+placeholder="コメントを書いてください"></textarea>
 
-  <script src="script.js"></script>
+<button id="addButton">
+
+追加
+
+</button>
+
+</div>
+
+</section>
+
+<section class="ad-area">
+
+<h2>広告エリア</h2>
+
+<p>Google AdSense予定</p>
+
+</section>
+
+<section>
+
+<h2>邦楽アルバム</h2>
+
+<div
+id="japaneseList"
+class="album-list">
+
+</div>
+
+</section>
+
+<section>
+
+<h2>洋楽アルバム</h2>
+
+<div
+id="westernList"
+class="album-list">
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+
+©2026 Rocking Music Archive
+
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
